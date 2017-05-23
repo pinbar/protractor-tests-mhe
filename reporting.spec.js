@@ -23,9 +23,9 @@ describe('reporting test', function() {
     //navigate to view details
     browser.wait(EC.presenceOf(element(by.css('.view-details'))), 25000);
     element(by.css('.view-details')).click();
-    browser.wait(EC.presenceOf(element(by.css('div.activity-title > math-jax > div'))), 5000);
     
     //assert test condition
+    browser.wait(EC.presenceOf(element(by.css('div.activity-title > math-jax > div'))), 15000);
     expect(element(by.css('div.activity-title > math-jax > div')).getAttribute('innerHTML')).toEqual('Counts on a Number Line');
   });
 });
