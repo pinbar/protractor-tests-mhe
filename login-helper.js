@@ -4,6 +4,8 @@ module.exports = {
         browser.waitForAngularEnabled(false); //needed for non angular apps
         browser.get(url);
         
+        browser.driver.manage().window().setSize(1440, 900);
+
         //allows waiting until an element is present (needed for non angular apps)
         var EC = protractor.ExpectedConditions; 
         browser.wait(EC.presenceOf(element(by.name('loginUserName'))), 15000);
